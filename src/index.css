@@ -1,0 +1,103 @@
+/* Import Luxury Fashion Editorial Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200;300;400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans-body text-charcoal-900 bg-cream-50;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+  }
+  
+  code {
+    @apply font-mono;
+  }
+  
+  /* Luxury typography hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif-display text-charcoal-900;
+    line-height: 1.2;
+  }
+  
+  /* Script elements for decorative text */
+  .script-text {
+    @apply font-script text-charcoal-800;
+  }
+  
+  /* High-contrast serif for major headings */
+  .display-serif {
+    @apply font-serif-display font-bold text-charcoal-900;
+  }
+  
+  /* Bold sans-serif for impact statements */
+  .impact-text {
+    @apply font-sans-display font-bold uppercase tracking-wide text-charcoal-900;
+  }
+  
+  /* Clean sans-serif for body text */
+  .body-text {
+    @apply font-sans-body text-charcoal-700 leading-relaxed;
+  }
+}
+
+/* Custom component styles */
+@layer components {
+  /* Luxury button styles */
+  .btn-primary {
+    @apply bg-charcoal-900 text-cream-50 font-serif-display font-semibold py-3 px-8 transition-all duration-300 hover:bg-charcoal-800 hover:shadow-lg tracking-wide;
+  }
+  
+  .btn-secondary {
+    @apply bg-cream-50 text-charcoal-900 border-2 border-charcoal-900 hover:bg-charcoal-900 hover:text-cream-50 font-serif-display font-semibold py-3 px-8 transition-all duration-300 tracking-wide;
+  }
+  
+  .btn-accent {
+    @apply bg-burgundy-700 text-cream-50 font-serif-display font-semibold py-3 px-8 transition-all duration-300 hover:bg-burgundy-800 hover:shadow-lg tracking-wide;
+  }
+  
+  /* Luxury card styles */
+  .card {
+    @apply bg-cream-50 shadow-sm border border-cream-200 p-8;
+  }
+  
+  .card-elevated {
+    @apply bg-cream-50 shadow-lg border border-cream-300 p-8 hover:shadow-xl transition-shadow duration-300;
+  }
+  
+  /* Luxury section styles */
+  .section-padding {
+    @apply py-24 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-luxury {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  /* Typography utilities */
+  .heading-luxury {
+    @apply font-serif-display font-bold text-charcoal-900 tracking-tight;
+  }
+  
+  .subheading-luxury {
+    @apply font-sans-display font-semibold uppercase tracking-wider text-charcoal-700;
+  }
+  
+  .body-luxury {
+    @apply font-sans-body text-charcoal-600 leading-relaxed;
+  }
+  
+  /* Smooth scroll offset for fixed navbar */
+  .scroll-offset {
+    scroll-margin-top: 80px;
+  }
+}

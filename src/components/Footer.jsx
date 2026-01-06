@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -15,12 +15,15 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="heading-luxury text-2xl mb-6">
-              <span className="script-text text-xl">Style</span>
+              <span className="script-text text-xl italic font-thin">
+                Style
+              </span>
               <span className="ml-2">SPARK</span>
             </h3>
             <p className="body-luxury mb-8 max-w-md">
-              A sophisticated style challenge generator for creative discovery. 
-              Explore new artistic directions and unlock your creative potential through curated style exploration.
+              A sophisticated style challenge generator for creative discovery.
+              Explore new artistic directions and unlock your creative potential
+              through curated style exploration.
             </p>
           </div>
 
@@ -30,7 +33,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <button
-                  onClick={() => scrollToSection('hero')}
+                  onClick={() => scrollToSection("hero")}
                   className="body-luxury text-sm hover:text-charcoal-800 transition-colors duration-300"
                 >
                   Home
@@ -38,7 +41,7 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('wheel')}
+                  onClick={() => scrollToSection("wheel")}
                   className="body-luxury text-sm hover:text-charcoal-800 transition-colors duration-300"
                 >
                   Style Wheel
@@ -46,7 +49,7 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('quiz')}
+                  onClick={() => scrollToSection("quiz")}
                   className="body-luxury text-sm hover:text-charcoal-800 transition-colors duration-300"
                 >
                   Take Quiz
@@ -54,7 +57,7 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => scrollToSection('styles')}
+                  onClick={() => scrollToSection("styles")}
                   className="body-luxury text-sm hover:text-charcoal-800 transition-colors duration-300"
                 >
                   Browse Styles
@@ -67,7 +70,9 @@ const Footer = () => {
           <div>
             <h4 className="subheading-luxury text-xs mb-6">CONTACT</h4>
             <ul className="space-y-4">
-              <li className="body-luxury text-sm">rdavuro1@stu.vistula.edu.pl</li>
+              <li className="body-luxury text-sm">
+                rdavuro1@stu.vistula.edu.pl
+              </li>
               <li className="body-luxury text-sm">Warsaw, Poland</li>
             </ul>
           </div>

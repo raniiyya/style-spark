@@ -13,9 +13,7 @@ const IdeaSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="card-elevated">
             <p className="body-luxury text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
-              To break down creative barriers and inspire artists, designers, and creators of all levels 
-              to explore styles they might never have considered. By combining random discovery with 
-              personalized insights, we create a unique platform for creative growth and exploration.
+              This project was created to change the way we explore personal style online. Instead of telling users what to wear or where they fit, the platform opens space for curiosity, play, and reflection. Through interactive experiences and visual narratives, it helps users connect with fashion on a deeper level — discovering a style that feels personal, intentional, and truly their own.
             </p>
           </div>
         </div>

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Pinyon+Script&display=swap");
-/* Tailwind CSS directives */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,7 +12,6 @@
   --font-script: "Pinyon Script", cursive;
 }
 
-/* Custom base styles */
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -29,7 +28,6 @@
     @apply font-mono;
   }
 
-  /* Luxury typography hierarchy */
   h1,
   h2,
   h3,
@@ -39,30 +37,24 @@
     @apply font-serif-display;
   }
 
-  /* Script elements for decorative text */
   .script-text {
     @apply font-script;
   }
 
-  /* High-contrast serif for major headings */
   .display-serif {
     @apply font-serif-display font-bold text-charcoal-900;
   }
 
-  /* Bold sans-serif for impact statements */
   .impact-text {
     @apply font-sans-display font-bold uppercase tracking-wide text-charcoal-900;
   }
 
-  /* Clean sans-serif for body text */
   .body-text {
     @apply font-sans-body text-charcoal-700 leading-relaxed;
   }
 }
 
-/* Custom component styles */
 @layer components {
-  /* Luxury button styles */
   .btn-primary {
     @apply bg-charcoal-900 text-cream-50 font-serif-display font-semibold py-3 px-8 transition-all duration-300 hover:bg-charcoal-800 hover:shadow-lg tracking-wide;
   }
@@ -75,7 +67,6 @@
     @apply bg-burgundy-700 text-cream-50 font-serif-display font-semibold py-3 px-8 transition-all duration-300 hover:bg-burgundy-800 hover:shadow-lg tracking-wide;
   }
 
-  /* Luxury card styles */
   .card {
     @apply bg-cream-50 shadow-sm border border-cream-200 p-8;
   }
@@ -84,7 +75,6 @@
     @apply bg-cream-50 shadow-lg border border-cream-300 p-8 hover:shadow-xl transition-shadow duration-300;
   }
 
-  /* Luxury section styles */
   .section-padding {
     @apply py-24 px-4 sm:px-6 lg:px-8;
   }
@@ -93,7 +83,6 @@
     @apply max-w-7xl mx-auto;
   }
 
-  /* Typography utilities */
   .heading-luxury {
     @apply font-serif-display font-bold text-charcoal-900 tracking-tight;
   }
@@ -106,7 +95,6 @@
     @apply font-sans-body text-charcoal-600 leading-relaxed;
   }
 
-  /* Smooth scroll offset for fixed navbar */
   .scroll-offset {
     scroll-margin-top: 80px;
   }

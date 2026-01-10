@@ -1,8 +1,8 @@
 import { useState } from "react";
-import StyleModal from "../components/StyleModal";
-import { styles } from "../styles.ts";
-import { triggerWheelSpin } from "../components/Wheel.jsx";
-import { scrollToSection } from "../utils/scrollToSection.ts";
+import StyleModal from "../components/StyleModal/StyleModal.jsx";
+import { triggerWheelSpin } from "../components/Wheel/Wheel.jsx";
+import { scrollToSection } from "../utils/scrollToSection.js";
+import { stylesData } from "../stylesData.js";
 
 const StylesSection = () => {
   const [selectedStyle, setSelectedStyle] = useState(null);
@@ -30,10 +30,8 @@ const StylesSection = () => {
               Click on any style to learn more and get inspired.
             </p>
           </div>
-
-          {/* Styles Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {styles.map((style) => (
+            {stylesData.map((style) => (
               <div
                 key={style.id}
                 onClick={() => openModal(style)}
@@ -49,7 +47,6 @@ const StylesSection = () => {
                       />
                     ))}
                   </div>
-                  {/* Hover overlay */}
                   <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
                     <div className="opacity-0 hover:opacity-100 transition-opacity duration-300">
                       <div className="bg-white bg-opacity-90 rounded-full p-3">
@@ -76,8 +73,6 @@ const StylesSection = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* Style Content */}
                 <div className="p-6 flex flex-col flex-1">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {style.name}
@@ -85,7 +80,6 @@ const StylesSection = () => {
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">
                     {style.description}
                   </p>
-                  {/* Tags */}
                   {style.tags && style.tags.length > 0 && (
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-gray-700 mb-2">
@@ -108,7 +102,6 @@ const StylesSection = () => {
                       </div>
                     </div>
                   )}
-                  {/* Action Button */}
                   <button className="btn-primary w-full mt-auto">
                     Explore Style
                   </button>
@@ -117,8 +110,6 @@ const StylesSection = () => {
             ))}
           </div>
         </div>
-
-        {/* Style Modal */}
         <StyleModal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}

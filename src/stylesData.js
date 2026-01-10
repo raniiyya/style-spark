@@ -1,10 +1,11 @@
-export const styles = [
+export const stylesData = [
   {
     id: 1,
     key: "minimalist",
     name: "Minimalist / Classy",
     description:
       "This style is based on simplicity, balance, and long-lasting design. It avoids trends and excessive decoration, focusing instead on clean lines, neutral colors, and precise tailoring. The aesthetic communicates elegance through restraint and intentional design choices.",
+
     color: "bg-amber-200",
     canvasColor: "#fde68a",
     images: [

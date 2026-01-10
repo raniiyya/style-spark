@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import StyleModal from "./StyleModal";
-import { styles } from "../styles.ts";
+import { useState } from "react";
+import StyleModal from "../StyleModal/StyleModal.jsx";
+import { stylesData } from "../../stylesData.js";
+import { questions } from "./questions.js";
 
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -8,74 +9,6 @@ const Quiz = () => {
   const [isCompleted, setIsCompleted] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [quizResult, setQuizResult] = useState(null);
-
-  const questions = [
-    {
-      id: 1,
-      question: "Pick a color you wear the most:",
-      options: ["Black", "White", "Beige/Neutral", "Red", "Blue", "Patterns"],
-    },
-    {
-      id: 2,
-      question: "Which vibe fits your personality best?",
-      options: [
-        "Calm & understated",
-        "Confident & powerful",
-        "Playful & trendy",
-        "Soft & romantic",
-        "Active & sporty",
-        "Creative & vintage",
-      ],
-    },
-    {
-      id: 3,
-      question: "Favorite fabrics/textures:",
-      options: [
-        "Silk, wool, cashmere",
-        "Cotton, linen",
-        "Denim, leather",
-        "Lace, chiffon",
-        "Tech/activewear",
-        "Velvet, retro prints",
-      ],
-    },
-    {
-      id: 4,
-      question: "Pick a go-to outfit for social events:",
-      options: [
-        "Simple tailored pieces",
-        "Blazer & tailored pants",
-        "Statement streetwear",
-        "Flowy romantic dress",
-        "Sporty chic",
-        "Vintage-inspired ensemble",
-      ],
-    },
-    {
-      id: 5,
-      question: "How do you accessorize?",
-      options: [
-        "Minimal & subtle",
-        "Classic luxury items",
-        "Bold & trendy",
-        "Delicate & feminine",
-        "Functional & sporty",
-        "Eccentric & retro",
-      ],
-    },
-    {
-      id: 6,
-      question: "What kind of fashion energy do you like?",
-      options: [
-        "Calm & timeless",
-        "Confident & polished",
-        "Playful & expressive",
-        "Soft & delicate",
-        "Active & bold",
-        "Creative & nostalgic",
-      ],
-    },
-  ];
 
   const handleAnswerSelect = (answer) => {
     setAnswers({ ...answers, [currentQuestion]: answer });
@@ -93,33 +26,33 @@ const Quiz = () => {
 
   const handleQuizSubmission = () => {
     const allAnswers = Object.values(answers).join(" ").toLowerCase();
-    let selectedStyle = styles[0]; // default
+    let selectedStyle = stylesData[0];
 
     if (allAnswers.includes("minimal") || allAnswers.includes("neutral"))
-      selectedStyle = styles.find((s) => s.key === "minimalist");
+      selectedStyle = stylesData.find((s) => s.key === "minimalist");
     else if (
       allAnswers.includes("old money") ||
       allAnswers.includes("understated")
     )
-      selectedStyle = styles.find((s) => s.key === "oldmoney");
+      selectedStyle = stylesData.find((s) => s.key === "oldmoney");
     else if (
       allAnswers.includes("confident") ||
       allAnswers.includes("powerful")
     )
-      selectedStyle = styles.find((s) => s.key === "corporatechic");
+      selectedStyle = stylesData.find((s) => s.key === "corporatechic");
     else if (allAnswers.includes("street") || allAnswers.includes("casual"))
-      selectedStyle = styles.find((s) => s.key === "casualchic");
+      selectedStyle = stylesData.find((s) => s.key === "casualchic");
     else if (allAnswers.includes("romantic") || allAnswers.includes("soft"))
-      selectedStyle = styles.find((s) => s.key === "romantic");
+      selectedStyle = stylesData.find((s) => s.key === "romantic");
     else if (allAnswers.includes("sporty") || allAnswers.includes("active"))
-      selectedStyle = styles.find((s) => s.key === "sporty");
+      selectedStyle = stylesData.find((s) => s.key === "sporty");
     else if (allAnswers.includes("vintage"))
-      selectedStyle = styles.find((s) => s.key === "vintage");
+      selectedStyle = stylesData.find((s) => s.key === "vintage");
     else if (allAnswers.includes("y2k"))
-      selectedStyle = styles.find((s) => s.key === "y2k");
+      selectedStyle = stylesData.find((s) => s.key === "y2k");
     else if (allAnswers.includes("boho"))
-      selectedStyle = styles.find((s) => s.key === "boho");
-    console.log(selectedStyle);
+      selectedStyle = stylesData.find((s) => s.key === "boho");
+
     setQuizResult(selectedStyle);
     setIsCompleted(true);
     setShowModal(true);
@@ -138,7 +71,10 @@ const Quiz = () => {
 
   if (isCompleted) {
     return (
-      <div className="py-20 bg-gradient-to-br from-blue-50 to-green-50">
+      <div
+        id="quiz"
+        className="py-20 bg-gradient-to-br from-blue-50 to-green-50"
+      >
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-white rounded-2xl shadow-lg p-8 border border-blue-200">
             <h2 className="text-3xl font-bold text-gray-900 mb-4 font-lora">
@@ -176,7 +112,7 @@ const Quiz = () => {
   }
 
   return (
-    <div className="py-20">
+    <div id="quiz" className="py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4 font-lora">

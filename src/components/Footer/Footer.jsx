@@ -1,18 +1,10 @@
-import React from "react";
+import { scrollToSection } from "../../utils/scrollToSection";
 
 const Footer = () => {
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <footer className="bg-cream-50 border-t border-cream-200">
       <div className="container-luxury py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-          {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="heading-luxury text-2xl mb-6">
               <span className="script-text text-xl italic font-thin">
@@ -27,7 +19,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h4 className="subheading-luxury text-xs mb-6">QUICK LINKS</h4>
             <ul className="space-y-4">
@@ -66,7 +57,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h4 className="subheading-luxury text-xs mb-6">CONTACT</h4>
             <ul className="space-y-4">

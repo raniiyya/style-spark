@@ -1,4 +1,4 @@
-import { scrollToSection } from "../utils/scrollToSection.ts";
+import { scrollToSection } from "../utils/scrollToSection.js";
 
 const HeroSection = () => {
   return (
@@ -7,14 +7,12 @@ const HeroSection = () => {
         id="hero"
         className="min-h-screen flex items-center justify-center bg-cream-50 relative overflow-hidden pt-16"
       >
-        {/* Minimal background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/4 right-1/4 w-64 h-64 border border-cream-300 rounded-full opacity-20"></div>
           <div className="absolute bottom-1/4 left-1/4 w-48 h-48 border border-cream-300 rounded-full opacity-15"></div>
         </div>
 
         <div className="relative z-10 container-luxury text-center">
-          {/* Main Heading with luxury typography */}
           <h1 className="heading-luxury text-7xl md:text-8xl lg:text-9xl mb-8 leading-none">
             <span className="script-text text-[4rem] md:text-[4.75rem] lg:text-[6.25rem] italic font-thin">
               Style
@@ -23,15 +21,12 @@ const HeroSection = () => {
             <span className="display-serif">SPARK</span>
           </h1>
 
-          {/* Impact statement */}
           <div className="mb-12">
             <p className="text-lg md:text-xl mb-4 font-normal">
-              {/* BRAND MISSION IS UNVEILING TIMELESS & CHIC BEAUTY */}
               Brand Mission is Unveiling Timeless & Chic Beauty
             </p>
           </div>
 
-          {/* Luxury CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
             <button
               onClick={() => scrollToSection("styles")}
@@ -48,7 +43,7 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-      {/* Minimalist features preview */}
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto mb-24">
         <div className="text-center">
           <div className="w-16 h-16 border-2 border-charcoal-900 rounded-full flex items-center justify-center mx-auto mb-6">

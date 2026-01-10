@@ -9,7 +9,7 @@ const IdeaSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="card-elevated">
+          <div className="card">
             <p className="body-luxury text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
               This project was created to change the way we explore personal
               style online. Instead of telling users what to wear or where they

@@ -18,7 +18,9 @@ const HeroSection = () => {
               Style
             </span>
             <br />
-            <span className="display-serif">SPARK</span>
+            <span className="font-serif-display font-bold text-charcoal-900">
+              SPARK
+            </span>
           </h1>
 
           <div className="mb-12">

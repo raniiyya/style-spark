@@ -19,8 +19,6 @@
 
   body {
     @apply font-sans-body text-charcoal-900 bg-cream-50;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     line-height: 1.6;
   }
 
@@ -40,18 +38,6 @@
   .script-text {
     @apply font-script;
   }
-
-  .display-serif {
-    @apply font-serif-display font-bold text-charcoal-900;
-  }
-
-  .impact-text {
-    @apply font-sans-display font-bold uppercase tracking-wide text-charcoal-900;
-  }
-
-  .body-text {
-    @apply font-sans-body text-charcoal-700 leading-relaxed;
-  }
 }
 
 @layer components {
@@ -63,15 +49,7 @@
     @apply bg-cream-50 text-charcoal-900 border-2 border-charcoal-900 hover:bg-charcoal-900 hover:text-cream-50 font-serif-display font-semibold py-3 px-8 transition-all duration-300 tracking-wide;
   }
 
-  .btn-accent {
-    @apply bg-burgundy-700 text-cream-50 font-serif-display font-semibold py-3 px-8 transition-all duration-300 hover:bg-burgundy-800 hover:shadow-lg tracking-wide;
-  }
-
   .card {
-    @apply bg-cream-50 shadow-sm border border-cream-200 p-8;
-  }
-
-  .card-elevated {
     @apply bg-cream-50 shadow-lg border border-cream-300 p-8 hover:shadow-xl transition-shadow duration-300;
   }
 
@@ -93,9 +71,5 @@
 
   .body-luxury {
     @apply font-sans-body text-charcoal-600 leading-relaxed;
-  }
-
-  .scroll-offset {
-    scroll-margin-top: 80px;
   }
 }

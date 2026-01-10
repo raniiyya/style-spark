@@ -58,7 +58,7 @@
   }
 
   .container-luxury {
-    @apply max-w-7xl mx-auto;
+    @apply max-w-7xl mx-auto px-8 xl:px-0;
   }
 
   .heading-luxury {

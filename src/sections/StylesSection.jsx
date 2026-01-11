@@ -19,7 +19,7 @@ const StylesSection = () => {
         id="styles"
         className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50"
       >
-        <div className="mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8 container-luxury">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-lora">
               Explore Our Style Collection

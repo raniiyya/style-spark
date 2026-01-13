@@ -2,7 +2,7 @@ import { scrollToSection } from "../../utils/scrollToSection";
 
 const Footer = () => {
   return (
-    <footer className="bg-cream-50 border-t border-cream-200">
+    <footer className="bg-gradient-to-br from-indigo-50 to-purple-50">
       <div className="container-luxury py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="col-span-1 md:col-span-2">

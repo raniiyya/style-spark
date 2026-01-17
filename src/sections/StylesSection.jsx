@@ -41,6 +41,7 @@ const StylesSection = () => {
                   <div className="grid grid-cols-3 h-48">
                     {[0, 1, 2].map((_, i) => (
                       <img
+                        key={i}
                         src={style.images[i]}
                         alt={style.name + " image"}
                         className="h-full object-cover"
